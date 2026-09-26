@@ -1,0 +1,18 @@
+- id: "1"
+  title: The triage-decision schema
+  description: >-
+    Build the schema a triage decision is validated against (CAP-1): allowed
+    category and priority values, route derived from category by the fixed
+    mapping, and a single-line rationale under 200 characters. Anything else
+    is rejected by an error naming the field and what was expected.
+  spec_checkpoint: false
+  done_checkpoint: false
+- id: "2"
+  title: The seed loader
+  description: >-
+    Build load_seed.py so one command loads seed/tickets.csv and
+    seed/customers.csv into app.db as tables tickets and customers, storing
+    open_tickets as an integer of 0 or more and rejecting anything else
+    (CAP-2). Running it twice gives the same database (CAP-3).
+  spec_checkpoint: false
+  done_checkpoint: false
